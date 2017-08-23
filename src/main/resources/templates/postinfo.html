@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Information Entered</title>
+</head>
+
+<body>
+
+<p  align="center" th:text="'First Name: '+ ${newschool.firstname}" />
+<p  align="center" th:text="'Last Name: '+ ${newschool.lastname}" />
+<p  align="center" th:text="'Email: '+ ${newschool.email}" />
+<p  align="center" th:text="'Phone number: '+ ${newschool.phonenumber}" />
+<p  align="center" th:text="'School: '+ ${newschool.school}" />
+
+
+
+<a href="/addinfo">Try Again</a>
+
+
+</body>
+</html>
