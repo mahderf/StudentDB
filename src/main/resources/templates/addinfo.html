@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
     <title>Title</title>
+    <link href="../css/login.css" rel="stylesheet" >
 </head>
 <body>
-<form action="#" th:action="@{/addinfo}" th:object="${newschool}" method="post">
-    <p align="center">First Name: <input type="text" th:field="*{firstname}"/>
+<form action="#" th:action="@{/}" th:object="${newschool}" method="post">
+    <input type="hidden" th:field="*{id}" />
+    <p align="center">First Name: <input type="text" th:field="*{firstname} " class="name"/>
         <span th:if="${#fields.hasErrors('firstname')}" th:errors="*{firstname}">Name Error</span></p>
-    <p align="center">Last Name: <input type="text" th:field="*{lastname}"/>
+    <p align="center">Last Name: <input type="text" th:field="*{lastname}" class="name"/>
         <span th:if="${#fields.hasErrors('lastname')}" th:errors="*{lastname}">Name Error</span></p>
-    <p align="center">Email: <input type="text" th:field="*{email}"/>
+    <p align="center">Email: <input type="text" th:field="*{email}" class="name"/>
         <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email Error</span></p>
 
-    <p align="center">Phone Number: <input type="text" th:field="*{phonenumber}"/>
+    <p align="center">Phone Number: <input type="text" th:field="*{phonenumber}" class="name"/>
         <span th:if="${#fields.hasErrors('phonenumber')}" th:errors="*{phonenumber}">phonenumber Error</span></p>
-    <p align="center">School: <input type="text" th:field="*{school}"/>
+    <p align="center">School: <input type="text" th:field="*{school}" class="name"/>
         <span th:if="${#fields.hasErrors('school')}" th:errors="*{school}">School Error</span></p>
 
-
-
-    <p align="center"><input type="submit" value="Enter" /> <input type="reset" value="Reset" /> </p>
-
+    <p align="center"><input type="submit" value="Enter" />
 </form>
 </body>
 </html>

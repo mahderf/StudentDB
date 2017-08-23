@@ -3,20 +3,23 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Information Entered</title>
+    <link href="../css/login.css" rel="stylesheet" >
 </head>
 
 <body>
 
-<p  align="center" th:text="'First Name: '+ ${newschool.firstname}" />
-<p  align="center" th:text="'Last Name: '+ ${newschool.lastname}" />
-<p  align="center" th:text="'Email: '+ ${newschool.email}" />
-<p  align="center" th:text="'Phone number: '+ ${newschool.phonenumber}" />
-<p  align="center" th:text="'School: '+ ${newschool.school}" />
+<p  align="center" th:text="'First Name: '+ ${newschool.firstname}" class="name"/>
+<p  align="center" th:text="'Last Name: '+ ${newschool.lastname}" class="name"/>
+<p  align="center" th:text="'Email: '+ ${newschool.email}" class="name"/>
+<p  align="center" th:text="'Phone number: '+ ${newschool.phonenumber}" class="name"/>
+<p  align="center" th:text="'School: '+ ${newschool.school}" class="name"/>
 
 
 
-<a href="/addinfo">Try Again</a>
-
-
+<a href="/">Try Again</a>
+<div>
+<a th:href="@{/update/{id}(id=${newschool.id})}" >Edit</a>
+<a th:href="@{/delete/{id}(id=${newschool.id})}" >delete</a>
+</div>
 </body>
 </html>

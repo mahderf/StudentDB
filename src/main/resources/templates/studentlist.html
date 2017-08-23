@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8"/>
+    <title>List of Students</title>
+    <link href="../css/login.css" rel="stylesheet" >
+</head>
+
+
+<div th:each= "item:${stud}">
+<p  align="center" th:text="'First Name: '+ ${item.firstname} +' '+ ${item.lastname}" class="name"/>
+<p  align="center" th:text="'Email: '+ ${item.email}" class="name"/>
+<p  align="center" th:text="'Phone number: '+ ${item.phonenumber}" class="name"/>
+<p  align="center" th:text="'School: '+ ${item.school}" class="name"/>
+
+</div>
+
+<a href="/">Try Again</a>
+
+</body>
+</html>
